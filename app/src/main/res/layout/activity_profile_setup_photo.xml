@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_gradient"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="28dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Step 2 of 3"
+        android:textSize="12sp"
+        android:textColor="#CCC3E8"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a profile photo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Real photos help build trust with other members"
+        android:textSize="13sp"
+        android:textColor="#E8E0FF"
+        android:layout_marginBottom="36dp" />
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/profilePhotoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_field_bg"
+            android:scaleType="centerCrop"
+            android:contentDescription="Profile photo preview" />
+
+        <TextView
+            android:id="@+id/photoPlaceholderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="📷"
+            android:textSize="40sp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/choosePhotoButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/btn_secondary"
+        android:text="Choose photo"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:layout_marginBottom="32dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/nextButtonPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_primary"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/skipPhotoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip for now"
+        android:textSize="14sp"
+        android:textColor="#CCC3E8" />
+
+</LinearLayout>

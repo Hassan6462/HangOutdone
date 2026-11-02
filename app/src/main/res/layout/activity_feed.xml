@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F5F2">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#2D2640"
+            android:fitsSystemWindows="true"
+            app:title="HangOut"
+            app:titleTextColor="#FFFFFF"
+            app:subtitle="What's happening nearby"
+            app:subtitleTextColor="#CCC3E8" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- List/Map toggle -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/viewToggle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FFFFFF"
+            app:tabSelectedTextColor="#2D2640"
+            app:tabTextColor="#999999"
+            app:tabIndicatorColor="#FF7E5F"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 List" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗺️ Map" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- List view -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hangoutRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
+
+    <!-- FAB: Post a new hangout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/postHangoutFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="Post a hangout"
+        app:backgroundTint="#FF7E5F"
+        app:tint="#FFFFFF"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
