@@ -1,0 +1,8 @@
+{
+  "name": "HangOut",
+  "description": "Spontaneous meetups and hangout plans with people nearby. Connect, join activities, and chat in real-time.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
